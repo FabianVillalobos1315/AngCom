@@ -54,5 +54,21 @@ export class RutasComponent implements OnInit {
   ngOnInit(): void {
   }
   // LAT -33.4560834  LON -70.702907
+  /* 
+  tabla rutas
+  {
+    Razon Social:
+    Rut:
+    Alias:
+    Telefono1:
+    Telefono2:
+    Dirección:
+    Comuna:
+    Región:
+    FK_Ruta: codigoRuta
+
+  }
+  */
+
 
 }

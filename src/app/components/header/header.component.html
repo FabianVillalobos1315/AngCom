@@ -9,14 +9,17 @@
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['Inicio']">Inicio</a>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Mantenedor
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" [routerLink]="['Producto']">Productos</a>
+                    <a class="dropdown-item" [routerLink]="['Rutas']">Rutas</a>
+                </div>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['Contacto']">Contacto</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['Producto']">Crear Productos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['Rutas']">Crear Ruta</a>
             </li>
         </ul>
     </div>
