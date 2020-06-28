@@ -2,11 +2,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductoComponent } from './components/producto/producto.component';
+import { RutasComponent } from './components/rutas/rutas.component';
 
 const APP_ROUTES: Routes = [
     { path: 'Inicio', component: InicioComponent },
     { path: 'Contacto', component: ContactComponent },
     { path: 'Producto', component: ProductoComponent },
+    { path: 'Rutas', component: RutasComponent },
     { path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 

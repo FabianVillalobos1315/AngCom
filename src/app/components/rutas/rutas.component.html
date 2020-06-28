@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="agregar()">
+            <input type="text" placeholder="Id Ruta" name="codigoRuta" class="form-control mt-3" [(ngModel)]="ruta.codigoRuta">
+            <button class="btn btn-primary mt-3">Agregar Ruta</button>
+        </form>
+    </div>
+
+    <div class="col">
+        <app-lista-rutas></app-lista-rutas>
+    </div>
+</div>

@@ -3,7 +3,7 @@ import { DataService } from './../../services/data.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import {MatInputModule} from '@angular/material/input';
-import { Producto } from '../../producto.model';
+import { Producto } from '../../modelos/producto.model';
 
 @Component({
   selector: 'app-producto',
@@ -15,7 +15,6 @@ export class ProductoComponent implements OnInit {
   public formAddProductos: FormGroup;
   list: Producto[];
   productos: any;
-  editarProducto: any = {descripcion: ''};
 
   constructor(private toastr: ToastrService, private dbData: DataService) {
     this.formAddProductos = this.crearProducto();
@@ -56,7 +55,6 @@ export class ProductoComponent implements OnInit {
   }
 
   editar(item){
-    this.editarProducto='Hola';
   }
 
   ngOnInit() {

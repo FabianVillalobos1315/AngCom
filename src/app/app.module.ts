@@ -6,7 +6,7 @@ import { environment } from '../environments/environment';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 
 // Rutas
@@ -18,10 +18,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ProductoComponent } from './components/producto/producto.component';
+import { RutasComponent } from './components/rutas/rutas.component';
 
 // Servicios
 
 import { DataService } from './services/data.service';
+import { RutasService } from './services/rutas.service';
+import { ListaRutasComponent } from './components/lista-rutas/lista-rutas.component';
+
 
 
 @NgModule({
@@ -31,12 +35,15 @@ import { DataService } from './services/data.service';
     HeaderComponent,
     FooterComponent,
     InicioComponent,
-    ProductoComponent
+    ProductoComponent,
+    RutasComponent,
+    ListaRutasComponent
   ],
   imports: [
     BrowserModule,
     APP_ROUTING,
     ReactiveFormsModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     BrowserAnimationsModule,
@@ -48,7 +55,8 @@ import { DataService } from './services/data.service';
     MatInputModule,
   ],
   providers: [
-    DataService
+    DataService,
+    RutasService
   ],
   bootstrap: [AppComponent]
 })

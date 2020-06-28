@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { Producto } from '../producto.model';
+import { Producto } from '../modelos/producto.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Action } from 'rxjs/internal/scheduler/Action';
