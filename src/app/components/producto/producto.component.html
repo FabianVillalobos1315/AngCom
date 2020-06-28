@@ -1,0 +1,51 @@
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-6">
+            <br/>
+            <div class="card">
+                <div class="card-body text-center">
+                    <h1><ins>Agregar Producto</ins></h1>
+                    <hr/>
+                    <form [formGroup]="formAddProductos" (ngSubmit)="agregarProductos() ">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="lblCodigo " class="col-form-label">Codigo: </label>
+                                <br/>
+                                <input type="text " class="form-control" formControlName="codProducto" placeholder="Producto">
+                                <div class="alert alert-danger" role="alert" *ngIf="codProducto.invalid && (codProducto.dirty || codProducto.touched) ">
+                                    <div class="container-error-message " *ngIf="codProducto.errors.required ">Campo Requerido</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lblDescripcion" class="col-form-label">Descripción: </label>
+                                <br/>
+                                <input type="text " class="form-control" formControlName="descripcion" placeholder="escobillon">
+                                <div class="alert alert-danger" role="alert" *ngIf="descripcion.invalid && (descripcion.dirty || descripcion.touched) ">
+                                    <div class="container-error-message " *ngIf="descripcion.errors.required ">Campo Requerido</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Cantidad</mat-label>
+                                    <input matInput formControlName="cantidad" type="number" value="1">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <!-- <button type="submit " class="btn btn-outline-primary " [disabled]="!formularioContacto.valid ">Enviar</button> -->
+                        <button mat-button color="primary" type="submit" class="btn btn-outline-primary" [disabled]="!formAddProductos.valid ">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <br/>
+            <div class="card">
+                <div class="card-body text-center">
+                    <h1><ins>Listar Productos</ins></h1>
+                    <hr/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
