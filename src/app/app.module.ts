@@ -45,7 +45,7 @@ import { DataService } from './services/data.service';
     }),
     MatSliderModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
   ],
   providers: [
     DataService

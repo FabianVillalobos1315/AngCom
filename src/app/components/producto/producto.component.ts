@@ -14,9 +14,14 @@ export class ProductoComponent implements OnInit {
 
   public formAddProductos: FormGroup;
   list: Producto[];
+  productos: any;
+  editarProducto: any = {descripcion: ''};
 
   constructor(private toastr: ToastrService, private dbData: DataService) {
     this.formAddProductos = this.crearProducto();
+    this.dbData.obtenerProductos().subscribe(prod => {
+      this.productos = prod;
+    });
    }
 
    // Obtener datos de la vista
@@ -45,15 +50,16 @@ export class ProductoComponent implements OnInit {
     }
   }
 
+  eliminar(item){
+    this.dbData.eliminar(item);
+    this.toastr.warning('Producto Eliminado');
+  }
+
+  editar(item){
+    this.editarProducto='Hola';
+  }
+
   ngOnInit() {
-    this.dbData.obtenerProductos().subscribe(actionArray => {
-      this.list = actionArray.map(item => {
-        return {
-          id: item.payload.doc.id,
-         // ...item.payload.doc.data()
-        } as Producto;
-      })
-    });
   }
 
 }
