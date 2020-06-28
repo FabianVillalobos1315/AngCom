@@ -1,12 +1,61 @@
-<div class="row">
-    <div class="col">
-        <form (ngSubmit)="agregar()">
-            <input type="text" placeholder="Id Ruta" name="codigoRuta" class="form-control mt-3" [(ngModel)]="ruta.codigoRuta">
-            <button class="btn btn-primary mt-3">Agregar Ruta</button>
-        </form>
-    </div>
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-6 mt-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h1><ins>Agregar Ruta</ins></h1>
+                    <hr/>
+                    <form [formGroup]="formAddRuta" (ngSubmit)="agregar() ">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="lblCodigo " class="col-form-label">Codigo: </label>
+                                <br/>
+                                <input type="text " class="form-control" formControlName="codigoRuta" placeholder="Id Ruta">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="lblNombre" class="col-form-label">Nombre: </label>
+                                <br/>
+                                <input type="text " class="form-control" formControlName="nombre">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="lblDescripcion" class="col-form-label">Descripción: </label>
+                                <br/>
+                                <input type="text " class="form-control" formControlName="descripcion">
+                            </div>
+                        </div>
+                        <button mat-button color="primary" type="submit" class="btn btn-outline-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-    <div class="col">
-        <app-lista-rutas></app-lista-rutas>
+        <div class="col-md-6 mt-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h1><ins>Listar Rutas</ins></h1>
+                    <hr/>
+                    <table class="table table-hover table-responsive-md">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Descripción</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let item of rutas; let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.nombre}}</td>
+                            <td>{{item.descripcion}}</td>
+                            <td class="row">
+                                <div class="float right" (click)="eliminar(item)">
+                                    <img class="image-responsive" src="https://image.flaticon.com/icons/svg/1345/1345823.svg" height="16px" width="16px">
+                                </div>
+                            </td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

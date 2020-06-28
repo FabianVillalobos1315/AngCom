@@ -22,7 +22,6 @@ export class DataService {
     this.contactCollection = afs.collection<any>('contactos');
 
     this.productoCollection = afs.collection<Producto>('productos');
-    // this.productos = this.productoCollection.valueChanges();
     this.productos = this.productoCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as Producto;
