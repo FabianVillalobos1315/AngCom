@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  mapBoxToken: 'pk.eyJ1IjoiZmFidmlsIiwiYSI6ImNrYzdzeTY5eDE0Z3cycnFvbXlhMjJ5ZmgifQ.hmt3N7KCT8uFPIuEY9SZag',
   firebase: {
     apiKey: "AIzaSyARo76Rbzo1oTBGa_tBuiRJHQ2e1qMjc2g",
     authDomain: "comercio1315-85b8b.firebaseapp.com",

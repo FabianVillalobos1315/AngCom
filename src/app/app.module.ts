@@ -26,6 +26,7 @@ import { DataService } from './services/data.service';
 import { RutasService } from './services/rutas.service';
 import { ListaRutasComponent } from './components/lista-rutas/lista-rutas.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
+import { LocalizacionComponent } from './components/localizacion/localizacion.component';
 
 
 
@@ -39,7 +40,8 @@ import { ClienteComponent } from './components/cliente/cliente.component';
     ProductoComponent,
     RutasComponent,
     ListaRutasComponent,
-    ClienteComponent
+    ClienteComponent,
+    LocalizacionComponent
   ],
   imports: [
     BrowserModule,
