@@ -18,7 +18,7 @@ export class DataService {
   productos: Observable<Producto[]>;
   private productoDoc: AngularFirestoreDocument<Producto>;
 
-  constructor(private afs: AngularFirestore) {
+  constructor(private afs: AngularFirestore, private db: AngularFirestoreDocument) {
     this.contactCollection = afs.collection<any>('contactos');
 
     this.productoCollection = afs.collection<Producto>('productos');

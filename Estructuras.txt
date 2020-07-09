@@ -1,0 +1,17 @@
+clientes
+{
+apellidoPaterno: string,
+apellidoMaterno: string,
+celular: number,
+comuna: string,
+direccion: string,
+dvRut: number,
+idRuta: number,
+nombres: string,
+numero: number,
+razonSocial: string,
+region: number,
+rut: number,
+telefono: number,
+villaPoblacion: string,
+}

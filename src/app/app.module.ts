@@ -5,7 +5,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -28,6 +28,7 @@ import { RutasService } from './services/rutas.service';
 import { ListaRutasComponent } from './components/lista-rutas/lista-rutas.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { LocalizacionComponent } from './components/localizacion/localizacion.component';
+import { DetalleRutaComponent } from './components/detalle-ruta/detalle-ruta.component';
 
 
 
@@ -42,7 +43,8 @@ import { LocalizacionComponent } from './components/localizacion/localizacion.co
     RutasComponent,
     ListaRutasComponent,
     ClienteComponent,
-    LocalizacionComponent
+    LocalizacionComponent,
+    DetalleRutaComponent
   ],
   imports: [
     BrowserModule,
