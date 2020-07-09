@@ -23,6 +23,7 @@ import { RutasComponent } from './components/rutas/rutas.component';
 // Servicios
 
 import { DataService } from './services/data.service';
+import { MapService } from './services/map.service';
 import { RutasService } from './services/rutas.service';
 import { ListaRutasComponent } from './components/lista-rutas/lista-rutas.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
@@ -60,7 +61,8 @@ import { LocalizacionComponent } from './components/localizacion/localizacion.co
   ],
   providers: [
     DataService,
-    RutasService
+    RutasService,
+    MapService
   ],
   bootstrap: [AppComponent]
 })
